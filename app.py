@@ -13,5 +13,17 @@ db = SQLAlchemy(app)
 ma = Marshmallow(app)
 
 heroku = Heroku(app)
-CORS(app)
+CORS(app) 
+
+@app.route('/')
+def hello():
+    return "hey flask!"
+
+
+if __name__ == "__main__":
+    app.debug = True
+    app.run()
+
+
+
 
