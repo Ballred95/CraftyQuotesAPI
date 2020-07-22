@@ -22,7 +22,15 @@ class Save(db.model):
     text_align = db.Column(db.String(100), unique=False)
     clipart = db.Column(db.String(100), unique=False)
 
-    def __init__(self, name, text_content, text_align, clipart)
+    def __init__(self, name, text_content, text_align, clipart):
+        self.name = name
+        self.text_content = text_content
+        self.text_align = text_align
+        self.clipart = clipart
+
+class SaveSchema(ma.Schema):
+    class Meta:
+        fields = ('name', 'text_content', 'text-align', 'clipart')
 
 
 if __name__ == "__main__":
