@@ -15,7 +15,7 @@ ma = Marshmallow(app)
 heroku = Heroku(app)
 CORS(app) 
 
-class Save(db.model):
+class Save(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(100), unique=False)
     imgsrc = db.Column(db.String(), unique=False)
