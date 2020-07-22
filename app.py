@@ -18,9 +18,11 @@ CORS(app)
 class Save(db.model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(100), unique=False)
-    text-content = db.Column(db.String(100), unique=False)
-    text-align = db.Column(db.String(100), unique=False)
+    text_content = db.Column(db.String(100), unique=False)
+    text_align = db.Column(db.String(100), unique=False)
     clipart = db.Column(db.String(100), unique=False)
+
+    def __init__(self, name, text_content, text_align, clipart)
 
 
 if __name__ == "__main__":
