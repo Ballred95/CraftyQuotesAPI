@@ -32,6 +32,9 @@ class SaveSchema(ma.Schema):
     class Meta:
         fields = ('name', 'text_content', 'text-align', 'clipart')
 
+save_schema = SaveSchema()
+saves_schema = SaveSchema(many=True)
+
 
 if __name__ == "__main__":
     app.debug = True
