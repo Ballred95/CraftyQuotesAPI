@@ -50,7 +50,9 @@ def add_save():
     db.session.add(new_save)
     db.session.commit()
 
-    save = Save.query.get(new_guide.id)
+    save = Save.query.get(new_save.id)
+
+    return save_schema.jsonify(save)
 
 
 if __name__ == "__main__":
