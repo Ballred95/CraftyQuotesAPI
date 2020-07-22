@@ -15,9 +15,12 @@ ma = Marshmallow(app)
 heroku = Heroku(app)
 CORS(app) 
 
-@app.route('/')
-def hello():
-    return "hey flask!"
+class Save(db.model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(100), unique=False)
+    text-content = db.Column(db.String(100), unique=False)
+    text-align = db.Column(db.String(100), unique=False)
+    clipart = db.Column(db.String(100), unique=False)
 
 
 if __name__ == "__main__":
